@@ -2,28 +2,11 @@
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # Get list of brew installed things
 # brew install terminal-notifier
-
-# Aliases
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
-alias ls="colorls --all"
-alias lt="ls --tree"
-alias l="ls"
-alias la="ls"
-
-alias be="bundle exec"
-alias bi="bundle install"
-alias rs="bundle exec rails server -b 0.0.0.0"
-alias rc="bundle exec rails console"
-
-alias G="| grep"
-alias ..="cd .."
-alias killit='kill -9 %%'
-
-function psgrep() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
-function search() { find . -iname "*$@*" ; }
-
-alias alert='terminal-notifier -group "terminal" -title "Terminal Task" -activate "com.googlecode.iterm2" -message "$([ $? = 0 ] && echo Finished || echo Error)"'
+# brew install tmux
+# gem install colorls
+# gem install lolcat
+# brew install cowsay
+# brew install thefuck
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/as027811/.oh-my-zsh
@@ -166,3 +149,47 @@ function set_iterm_title() {
     echo -ne "\033]0;$1\007"
   fi
 }
+
+# Aliases
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
+alias ls="colorls --all"
+alias ll="ls --long"
+alias lt="ls --tree"
+alias l="ls"
+alias la="ls"
+
+alias be="bundle exec"
+alias bi="bundle install"
+alias rs="bundle exec rails server -b 0.0.0.0"
+alias rc="bundle exec rails console"
+
+alias G="| grep"
+alias ..="cd .."
+alias killit='kill -9 %%'
+
+alias gs="git status"
+alias current_branch="git symbolic-ref --short HEAD"
+function gp() {
+  git push origin current_branch
+}
+function gfp() {
+  git push my-fork current_branch
+}
+function gc() {
+  git add .;
+  git commit -m "$@"
+}
+
+function psgrep() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
+function search() { find . -iname "*$@*" ; }
+
+alias alert='terminal-notifier -group "terminal" -title "Terminal Task" -activate "com.googlecode.iterm2" -message "$([ $? = 0 ] && echo Finished || echo Error)"'
+
+alias tls="tmux ls"
+function ta() { tmux a -t "$@" }
+alias ta="tmux a #"
+function tn() { tmux new -s "$@" }
+
+eval $(thefuck --alias)
+alias f="fuck"
