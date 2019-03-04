@@ -171,14 +171,18 @@ alias killit='kill -9 %%'
 alias gs="git status"
 alias current_branch="git symbolic-ref --short HEAD"
 function gp() {
-  git push origin current_branch
+  git push origin $(git symbolic-ref --short HEAD)
 }
 function gfp() {
-  git push my-fork current_branch
+  git push my-fork $(git symbolic-ref --short HEAD)
 }
 function gc() {
   git add .;
   git commit -m "$@"
+}
+function ga() {
+  gc "$1"
+  gp
 }
 
 function psgrep() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
