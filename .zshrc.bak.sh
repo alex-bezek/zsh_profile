@@ -22,7 +22,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-export EDITOR='vim'
+export EDITOR='code'
+export TERM="xterm-256color"
 
 # Setup Go
 export GOPATH=$HOME/go
@@ -191,23 +192,31 @@ function search() { find . -iname "*$@*" ; }
 
 alias alert='terminal-notifier -group "terminal" -title "Terminal Task" -activate "com.googlecode.iterm2" -message "$([ $? = 0 ] && echo Finished || echo Error)"'
 
-alias tls="tmux ls"
-function ta() { tmux a -t "$@" }
-alias ta="tmux a #"
-function tn() { tmux new -s "$@" }
-
 eval $(thefuck --alias)
 alias f="fuck"
 
 setopt hist_find_no_dups        # Dont display duplicates during searches.
 setopt share_history            # Share history between multiple shells
-setopt hist_ignore_all_dups     # Remember only one unique copy of the command.
+setopt hist_ignore_all_dups     # Remember only one unique copy of the command.s
 
-function jump() {
-  local sphere=$1;
-  if sphere='aws-stage'; then
-    spawn ssh ssh.us-west-2.staginghealtheintent.com
-    expect "Password:"
-    send $(lpass show --password 'cerner sphere stage') 
-  fi
+function jump () {
+  $HOME/code/personal/zsh_profile/jump "$1"
+}
+
+alias tls="tmux ls"
+function ta() { tmux a -t "$@" }
+alias ta="tmux a #"
+function tn() { tmux new -s "$@" }
+
+# tmux kill-session -t myname
+function jumpall() {
+  tmux new-session -s jumpgates \; \
+    split-window -v \; \
+    send-keys 'jump stage' C-m \; \
+    split-window -h \; \
+    send-keys 'jump stage-aws' C-m \; \
+    select-pane -t 0 \; \
+    send-keys 'jump prod' C-m \; \
+    split-window -h\; \
+    send-keys 'jump prod-aws' C-m \; \
 }
