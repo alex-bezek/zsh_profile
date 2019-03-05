@@ -1,0 +1,56 @@
+#!/usr/bin/expect -f
+
+switch [lindex $argv 0] {
+    prod {
+        set credentials "cerner-sphere"
+        set jumpgate "ssh.cernersphere.com"
+    }
+    prod-aws {
+        set credentials "cerner-sphere"
+        set jumpgate "ssh.us-west-2.healtheintent.com"
+    }
+    stage {
+        set credentials "cerner-sphere-stage"
+        set jumpgate "ssh.spherestage.com"
+    }
+    stage-aws {
+        set credentials "cerner-sphere-stage"
+        set jumpgate "ssh.us-west-2.staginghealtheintent.com"
+    }
+}
+
+set timeout 60
+set password [exec lpass show --password "$credentials"]
+
+spawn ssh $jumpgate
+
+proc expect_password { password } {
+    expect "Password:"
+    send "$password\r";
+}
+
+proc expect_duo {} {
+  expect "Passcode or option (1-1):"
+  send "1\r"
+}
+
+expect {
+    "$ " {}
+    "(yes/no)? " {
+        send "yes\n"
+        set running [ expect_password $password ]
+    }
+    "Password:" {
+        send "$password\r";
+        set running [ expect_duo ]
+    }
+}
+
+expect "$ "
+send "ssh localhost\r";
+
+set running [ expect_password $password ]
+expect "$ "
+send "top\r"
+
+interact

@@ -7,6 +7,7 @@
 # gem install lolcat
 # brew install cowsay
 # brew install thefuck
+# brew install lastpass-cli
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/as027811/.oh-my-zsh
@@ -197,3 +198,16 @@ function tn() { tmux new -s "$@" }
 
 eval $(thefuck --alias)
 alias f="fuck"
+
+setopt hist_find_no_dups        # Dont display duplicates during searches.
+setopt share_history            # Share history between multiple shells
+setopt hist_ignore_all_dups     # Remember only one unique copy of the command.
+
+function jump() {
+  local sphere=$1;
+  if sphere='aws-stage'; then
+    spawn ssh ssh.us-west-2.staginghealtheintent.com
+    expect "Password:"
+    send $(lpass show --password 'cerner sphere stage') 
+  fi
+}
