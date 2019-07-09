@@ -8,6 +8,10 @@
 # brew install cowsay
 # brew install thefuck
 # brew install lastpass-cli
+# brew install bat
+# pip install aws cli and other things
+# dowload awscli_setup.py https://github.cerner.com/hi-infra/hi-aws-handbook/blob/master/scripts/awscli_setup.py
+
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/as027811/.oh-my-zsh
@@ -26,7 +30,9 @@ export EDITOR='code'
 export TERM="xterm-256color"
 
 # Setup Go
-export GOPATH=$HOME/go
+export GOPATH="${HOME}/go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # Setup Node
 export NVM_DIR="/Users/as027811/.nvm"
@@ -166,7 +172,7 @@ alias bi="bundle install"
 alias rs="bundle exec rails server -b 0.0.0.0"
 alias rc="bundle exec rails console"
 
-alias G="| grep"
+alias G=" | grep "
 alias ..="cd .."
 alias killit='kill -9 %%'
 
@@ -220,3 +226,14 @@ function jumpall() {
     split-window -h\; \
     send-keys 'jump prod-aws' C-m \; \
 }
+
+# TODO: Setup jump script for aws command line with last pass
+
+# this is to select the aws cli profile to setup
+alias awscredentials="~/awscli_setup.py"
+# this is for aws cli with the hidev profile
+alias hidevcredentials="~/awscli_setup.py -p hidev"
+# this is for aws cli with the hiprod profile
+alias hiprodcredentials="~/awscli_setup.py -p hiprod"
+# Setup auto complete
+export PATH=/usr/local/aws/bin:$PATH
