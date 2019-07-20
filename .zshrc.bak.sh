@@ -35,8 +35,13 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # Setup Node
-export NVM_DIR="/Users/as027811/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# export NVM_DIR="/Users/as027811/.nvm"
+# export NVM_DIR="/usr/local/opt/nvm/nvm.sh/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+NVM_HOMEBREW="/usr/local/opt/nvm/nvm.sh"
+[ -s "$NVM_HOMEBREW" ] && \. "$NVM_HOMEBREW"
+
 export PATH="$HOME/.yarn/bin:$PATH"
 # place this after nvm initialization!
 autoload -U add-zsh-hook
@@ -58,7 +63,7 @@ source ~/.rvm/scripts/rvm
 # Load Nerd Fonts with Powerlevel9k theme for Zsh
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_SHORTEN_STRATEGY=”truncate_from_right”
-source ~/powerlevel9k/powerlevel9k.zsh-theme
+source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 
 zsh_docker_signal() {
 	local color
@@ -134,7 +139,7 @@ function automatic_iterm_tab_color_cwd () {
 }
 
 function set_tab_color() {
-  if [[ -f Gemfile.lock ]] || ls ./*.gemspec 1> /dev/null 2>&1; then
+  if [[ -f Gemfile.lock ]]; then
     echo -e "\033]6;1;bg;red;brightness;231\a"
     echo -e "\033]6;1;bg;green;brightness;68\a"
     echo -e "\033]6;1;bg;blue;brightness;68\a"
