@@ -61,6 +61,8 @@ brew "python@2"
 brew "ruby-build"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
+# Terraform CLI
+brew "terraform"
 # Programatically correct mistyped console commands
 brew "thefuck"
 # Terminal multiplexer
