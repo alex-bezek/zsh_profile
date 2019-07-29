@@ -91,6 +91,8 @@ brew "loadimpact/k6/k6"
 brew "sambadevi/powerlevel9k/powerlevel9k"
 # A tool for exploring each layer in a docker image
 brew "wagoodman/dive/dive"
+# A fuzzy finder tool
+brew "fzf"
 cask "alfred"
 cask "docker"
 cask "evernote"
