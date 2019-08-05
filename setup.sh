@@ -1,7 +1,10 @@
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 cp .zshrc.bak.sh ~/.zshrc
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+chsh -s /bin/zsh
 
 mkdir ~/code
 mkdir ~/code/personal
@@ -29,4 +32,6 @@ EOT
 
 curl -o ~/pacfile https://raw.github.cerner.com/ETS/workstation-config/master/ets.pac
 sudo networksetup -setautoproxyurl Wi-Fi http://localhost:5000/pacfile
+
+brew bundle
 

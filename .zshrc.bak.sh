@@ -4,11 +4,6 @@
 # brew install terminal-notifier
 # brew install tmux
 # gem install colorls
-# gem install lolcat
-# brew install cowsay
-# brew install thefuck
-# brew install lastpass-cli
-# brew install bat
 # pip install aws cli and other things
 # dowload awscli_setup.py https://github.cerner.com/hi-infra/hi-aws-handbook/blob/master/scripts/awscli_setup.py
 
@@ -166,7 +161,7 @@ function set_iterm_title() {
 # Aliases
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
-alias ls="colorls --all"
+# alias ls="colorls --all"
 alias ll="ls --long"
 alias lt="ls --tree"
 alias l="ls"

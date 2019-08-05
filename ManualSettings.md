@@ -14,6 +14,9 @@
     * Automatically show and hide dock
     *  Hot corners, put to sleep and desktop
 
+Start visual studio code, and install https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+Use extension to pull settings    
+
 Set settings to sync from zsh_profile/item, and restart
 https://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/
 rvm install ruby-2.6
