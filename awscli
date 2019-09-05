@@ -1,0 +1,21 @@
+#!/usr/bin/expect -f
+
+set timeout 60
+set username [exec lpass show --username "corp"]
+set password [exec lpass show --password "corp"]
+
+spawn awscli_setup
+
+expect "Select profile/account:  "
+send "2\r"
+
+expect "Username: "
+send "$username\r"
+
+expect "Password: "
+send "$password\r"
+
+expect "Authentification Choice: "
+send "1\r"
+
+interact

@@ -3,10 +3,6 @@
 # Get list of brew installed things
 # brew install terminal-notifier
 # brew install tmux
-# gem install colorls
-# pip install aws cli and other things
-# dowload awscli_setup.py https://github.cerner.com/hi-infra/hi-aws-handbook/blob/master/scripts/awscli_setup.py
-
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/as027811/.oh-my-zsh
@@ -48,8 +44,6 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Setup Ruby
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -206,7 +200,11 @@ setopt share_history            # Share history between multiple shells
 setopt hist_ignore_all_dups     # Remember only one unique copy of the command.s
 
 function jump () {
-  $HOME/code/personal/zsh_profile/jump "$1"
+  $HOME/zsh_profile/jump "$1"
+}
+
+function awscli () {
+  $HOME/zsh_profile/awscli
 }
 
 alias tls="tmux ls"
@@ -226,14 +224,3 @@ function jumpall() {
     split-window -h\; \
     send-keys 'jump prod-aws' C-m \; \
 }
-
-# TODO: Setup jump script for aws command line with last pass
-
-# this is to select the aws cli profile to setup
-alias awscredentials="~/awscli_setup.py"
-# this is for aws cli with the hidev profile
-alias hidevcredentials="~/awscli_setup.py -p hidev"
-# this is for aws cli with the hiprod profile
-alias hiprodcredentials="~/awscli_setup.py -p hiprod"
-# Setup auto complete
-export PATH=/usr/local/aws/bin:$PATH
