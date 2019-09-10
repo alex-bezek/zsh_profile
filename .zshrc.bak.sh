@@ -201,9 +201,16 @@ setopt share_history            # Share history between multiple shells
 setopt hist_ignore_all_dups     # Remember only one unique copy of the command.s
 
 function jump () {
+  if [ "$#" = 1 ]
+  then
+    vpn
+  fi
+  $HOME/zsh_profile/jump "$1"
+}
+
+function vpn () {
   $HOME/zsh_profile/vpn
   /opt/cisco/anyconnect/bin/vpn -s connect cwxvpn
-  $HOME/zsh_profile/jump "$1"
 }
 
 function awscli () {
@@ -217,13 +224,14 @@ function tn() { tmux new -s "$@" }
 
 # tmux kill-session -t myname
 function jumpall() {
+  vpn
   tmux new-session -s jumpgates \; \
     split-window -v \; \
-    send-keys 'jump stage' C-m \; \
+    send-keys 'jump stage pre-connected' C-m \; \
     split-window -h \; \
-    send-keys 'jump stage-aws' C-m \; \
+    send-keys 'jump stage-aws pre-connected' C-m \; \
     select-pane -t 0 \; \
-    send-keys 'jump prod' C-m \; \
+    send-keys 'jump prod pre-connected' C-m \; \
     split-window -h\; \
-    send-keys 'jump prod-aws' C-m \; \
+    send-keys 'jump prod-aws pre-connected' C-m \; \
 }
