@@ -1,8 +1,7 @@
 # Setup
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# Get list of brew installed things
-# brew install terminal-notifier
-# brew install tmux
+
+export LPASS_AGENT_TIMEOUT=0
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/as027811/.oh-my-zsh
@@ -44,6 +43,8 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Setup Ruby
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -200,6 +201,8 @@ setopt share_history            # Share history between multiple shells
 setopt hist_ignore_all_dups     # Remember only one unique copy of the command.s
 
 function jump () {
+  $HOME/zsh_profile/vpn
+  /opt/cisco/anyconnect/bin/vpn -s connect cwxvpn
   $HOME/zsh_profile/jump "$1"
 }
 
