@@ -10511,10 +10511,12 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>640 690 400 129 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 1548 620 392 0 1050 1920 1057 </string>
+	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 1050 1920 1057 0 1050 1920 1057 </string>
+	<string>0 193 890 552 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -11168,22 +11170,29 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.2</string>
+		<string>3.3.1</string>
 		<string>3.3.0</string>
+		<string>3.3.3</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
 		<string>{{0, 1050}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{837, 1907}</string>
+		<string>{794, 1907}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>9995DD0D-3FDC-4D8D-B876-5D5DB0AED3D2</string>
+	<key>NoSyncLastTipTime</key>
+	<real>589822143.14304698</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>4</integer>
+	<integer>10</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>586896488.49848497</real>
+	<real>587394991.70823598</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
+	<true/>
+	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
@@ -11527,6 +11536,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.currentSession.termid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession.terminalWindowName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -11600,6 +11617,14 @@
 				<true/>
 				<key>name</key>
 				<string>currentTab.currentSession.commandLine</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>number</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -11853,19 +11878,64 @@
 	</dict>
 	<key>NoSyncSearchHistory</key>
 	<array>
-		<string>({:ids=&gt;["eaf_page_id"], :tenantId=&gt;nil})</string>
-		<string>Failed to create sess</string>
-		<string>failed to </string>
-		<string>Failed to create session</string>
+		<string>delete</string>
+		<string>deelete</string>
+		<string>table/hi-consumer-applications-configuration</string>
+		<string>fail</string>
+		<string>connection</string>
+		<string>TEEEEEEESTOING</string>
+		<string>fatal</string>
+		<string>us-west-2</string>
+		<string>closing</string>
+		<string>1566174529.011900</string>
+	</array>
+	<key>NoSyncSearchHistory2</key>
+	<array>
+		<string>level</string>
+		<string>depth</string>
+		<string>205.222</string>
+		<string>159.140.205.222</string>
+		<string>intermountain</string>
+		<string>too man</string>
+		<string>max </string>
+		<string>amey-tenant-test.api.us.staginghealtheintent.com</string>
+		<string>api.us.staginghealtheintent.com</string>
+		<string>api.us.hea</string>
 	</array>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>586723688.49829102</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
+		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
+		<string>0009</string>
+		<string>0010</string>
+		<string>0011</string>
+		<string>0012</string>
+		<string>0013</string>
+		<string>0014</string>
+		<string>0015</string>
+		<string>0016</string>
+		<string>0017</string>
+		<string>0018</string>
+		<string>0019</string>
+	</array>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -11901,6 +11971,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/as027811/zsh_profile/iterm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -11910,11 +11982,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-09T01:08:46Z</date>
+	<date>2019-09-10T16:02:52Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
-	<true/>
+	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>SoundForEsc</key>
@@ -11932,7 +12004,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.0</string>
+	<string>3.3.3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
