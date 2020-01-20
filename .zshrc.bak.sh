@@ -55,16 +55,16 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_SHORTEN_STRATEGY=”truncate_from_right”
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 
-zsh_docker_signal() {
-	local color
-	local symbol="\uf308"
-	docker=$(docker ps)
-	if [ $? = 0 ]; then
-    version=$(docker version --format '{{.Server.Version}}')
-    color="%F{blue}"
-    echo -n "%{$color%}$symbol $version"
-  fi
-}
+# zsh_docker_signal() {
+# 	local color
+# 	local symbol="\uf308"
+# 	docker=$(docker ps)
+# 	if [ $? = 0 ]; then
+#     version=$(docker version --format '{{.Server.Version}}')
+#     color="%F{blue}"
+#     echo -n "%{$color%}$symbol $version"
+#   fi
+# }
 
 # http://nerdfonts.com/#cheat-lssheet
 POWERLEVEL9K_CUSTOM_FIRE="echo -n '\ue780'"
@@ -89,9 +89,9 @@ POWERLEVEL9K_NVM_FOREGROUND='black'
 POWERLEVEL9K_RUBY_ICON=$'\ue791'
 POWERLEVEL9K_RVM_BACKGROUND='red'
 
-POWERLEVEL9K_CUSTOM_DOCKER="zsh_docker_signal"
-POWERLEVEL9K_CUSTOM_DOCKER_BACKGROUND='black'
-POWERLEVEL9K_CUSTOM_DOCKER_FOREGROUND='blue'
+# POWERLEVEL9K_CUSTOM_DOCKER="zsh_docker_signal"
+# POWERLEVEL9K_CUSTOM_DOCKER_BACKGROUND='black'
+# POWERLEVEL9K_CUSTOM_DOCKER_FOREGROUND='blue'
 
 # Customise the Powerlevel9k prompts
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
@@ -100,15 +100,16 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   dir
   vcs
   ssh
-  custom_docker
+  # custom_docker
   nvm
   rvm
+  # command_execution_time
   newline
 )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-  context
-  command_execution_time
-  battery
+  # context
+  # command_execution_time
+  # battery
 )
 
 function get_random_rgb_from_cwd () {
@@ -203,7 +204,7 @@ setopt hist_ignore_all_dups     # Remember only one unique copy of the command.s
 function jump () {
   if [ "$#" = 1 ]
   then
-    vpn
+    # vpn
   fi
   $HOME/zsh_profile/jump "$1"
 }
@@ -235,3 +236,4 @@ function jumpall() {
     split-window -h\; \
     send-keys 'jump prod-aws pre-connected' C-m \; \
 }
+ZSH_THEME=powerlevel10k/powerlevel10k

@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 8,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#F3F8FFBA",
+        "font" : "Menlo",
+        "color" : "#F3F8FF8C"
+      },
+      "shortcut" : {
+        "size" : 20,
+        "colorSelected" : "#FFFFFFAA",
+        "font" : "Menlo",
+        "color" : "#FFFFFFA3"
+      },
+      "backgroundSelected" : "#00000054",
+      "text" : {
+        "size" : 13,
+        "colorSelected" : "#FFFFFFDD",
+        "font" : "Menlo",
+        "color" : "#DEDEDEFF"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 8,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 2,
+      "background" : "#00000000",
+      "spacing" : 10,
+      "text" : {
+        "size" : 32,
+        "colorSelected" : "#000000FF",
+        "font" : "Menlo",
+        "color" : "#FFFFFFFF"
+      },
+      "backgroundSelected" : "#B5D5FFFF"
+    },
+    "window" : {
+      "color" : "#00000056",
+      "paddingHorizontal" : 10,
+      "width" : 500,
+      "borderPadding" : 10,
+      "borderColor" : "#E7E7E700",
+      "blur" : 0,
+      "roundness" : 0,
+      "paddingVertical" : 10
+    },
+    "credit" : "Zander Martineau",
+    "separator" : {
+      "color" : "#00000054",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#FFFFFF6D",
+      "thickness" : 2
+    },
+    "name" : "Code neue (v2)"
+  }
+}

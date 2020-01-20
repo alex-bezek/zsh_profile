@@ -1,99 +1,77 @@
 tap "d12frosted/emacs-plus"
+tap "golangci/tap"
+tap "healtheintent/hide", "https://github.cerner.com/healtheintent/homebrew-hide.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "khanhas/tap"
 tap "loadimpact/k6"
 tap "sambadevi/powerlevel9k"
 tap "wagoodman/dive"
-# Shell extension to jump to frequently used directories
 brew "autojump"
-# Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# SSL/TLS cryptography library
-brew "openssl"
-# Library for command-line editing
-brew "readline"
-# Command-line interface for SQLite
-brew "sqlite"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-# Configurable talking characters in ASCII art
-brew "cowsay"
-# Pack, ship and run any application as a lightweight container
-brew "docker"
-# Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
-# X.509 and CMS library
-brew "libksba"
-# GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
-# Improved top (interactive process viewer)
-brew "htop"
-# LastPass command-line interface tool
-brew "lastpass-cli"
-# Build tool for Clojure
-brew "leiningen"
-# YAML Parser
-brew "libyaml"
-# Open source relational database management system
-brew "mysql", restart_service: true
-# Open source relational database management system
-brew "mysql@5.7", restart_service: true
-# Platform built on V8 to build network applications
-brew "node"
-# Manage multiple Node.js versions
-brew "nvm"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
-# Password manager
-brew "pass"
-# Interpreted, interactive, object-oriented programming language
-brew "python@2"
-# Install various Ruby versions and implementations
-brew "ruby-build"
-# Send macOS User Notifications from the command-line
-brew "terminal-notifier"
-# Terraform CLI
-brew "terraform"
-# Programatically correct mistyped console commands
-brew "thefuck"
-# Terminal multiplexer
-brew "tmux"
-# Watch files and take action when they change
-brew "watchman"
-# Internet file retriever
-brew "wget"
-# JavaScript package manager
-brew "yarn"
-# General-purpose lossless data-compression library
-brew "zlib"
-# UNIX shell (command interpreter)
-brew "zsh"
-# Fish-like fast/unobtrusive autosuggestions for zsh
-brew "zsh-autosuggestions"
-# Informative git prompt for zsh
-brew "zsh-git-prompt"
-# Fish shell like syntax highlighting for zsh
-brew "zsh-syntax-highlighting"
-# GNU Emacs text editor
-brew "d12frosted/emacs-plus/emacs-plus"
-# Load testing for the 21st century
-brew "loadimpact/k6/k6"
-# A badass zsh theme with more power than a normal earthling
-brew "sambadevi/powerlevel9k/powerlevel9k"
-# A tool for exploring each layer in a docker image
-brew "wagoodman/dive/dive"
-# A fuzzy finder tool
+brew "readline"
+brew "sqlite"
+brew "python", link: false
+brew "glib"
+brew "coreutils"
+brew "cowsay"
+brew "docker"
+brew "exa"
 brew "fzf"
+brew "libevent"
+brew "gnutls"
+brew "libksba"
+brew "gnupg"
+brew "go"
+brew "graphviz"
+brew "harfbuzz"
+brew "htop"
+brew "io"
+brew "jq"
+brew "lastpass-cli"
+brew "leiningen"
+brew "librsvg"
+brew "libyaml"
+brew "mysql", restart_service: true
+brew "mysql@5.6", restart_service: true
+brew "mysql@5.7", restart_service: true
+brew "nmap"
+brew "node"
+brew "nvm"
+brew "onefetch"
+brew "tree"
+brew "pass"
+brew "python-yq"
+brew "python@2"
+brew "ruby-build"
+brew "terminal-notifier"
+brew "terraform"
+brew "thefuck"
+brew "tmux"
+brew "watchman"
+brew "wget"
+brew "yarn"
+brew "zlib"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-git-prompt"
+brew "zsh-syntax-highlighting"
+brew "d12frosted/emacs-plus/emacs-plus"
+brew "golangci/tap/golangci-lint"
+brew "healtheintent/hide/cb-awscli"
+brew "khanhas/tap/spicetify-cli"
+brew "loadimpact/k6/k6"
+brew "sambadevi/powerlevel9k/powerlevel9k"
+brew "wagoodman/dive/dive"
+cask "alacritty"
 cask "alfred"
+cask "bitbar"
+cask "dash"
 cask "docker"
 cask "evernote"
 cask "flycut"
@@ -105,14 +83,24 @@ cask "font-mononoki-nerd-font"
 cask "font-robotomono-nerd-font"
 cask "fork"
 cask "google-chrome"
+cask "hammerspoon"
 cask "iterm2"
 cask "java"
+cask "karabiner-elements"
+cask "lastpass"
 cask "microsoft-teams"
 cask "mysqlworkbench"
+cask "ngrok"
 cask "now"
 cask "omnigraffle"
+cask "owasp-zap"
+cask "postman"
+cask "recordit"
 cask "slack"
 cask "spectacle"
 cask "spotify"
 cask "visual-studio-code"
 cask "webpack-dashboard"
+cask "wireshark"
+cask "workflowy"
+cask "zenmap"

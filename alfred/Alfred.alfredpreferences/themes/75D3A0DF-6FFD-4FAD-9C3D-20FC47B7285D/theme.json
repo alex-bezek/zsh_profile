@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 4,
+      "subtext" : {
+        "size" : 14,
+        "colorSelected" : "#0D90D9FF",
+        "font" : "Helvetica",
+        "color" : "#E633A0FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#230C35FF",
+        "font" : "Helvetica",
+        "color" : "#E633A0FF"
+      },
+      "backgroundSelected" : "#E633A0FF",
+      "text" : {
+        "size" : 16,
+        "colorSelected" : "#FBFFFBFF",
+        "font" : "Helvetica",
+        "color" : "#FBFEF9FF"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 2,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 2,
+      "background" : "#F6FFF1FF",
+      "spacing" : 10,
+      "text" : {
+        "size" : 36,
+        "colorSelected" : "#000000FF",
+        "font" : "Helvetica",
+        "color" : "#E633A0FF"
+      },
+      "backgroundSelected" : "#FFB18CFF"
+    },
+    "window" : {
+      "color" : "#4F4F55FF",
+      "paddingHorizontal" : 10,
+      "width" : 620,
+      "borderPadding" : 10,
+      "borderColor" : "#020001FF",
+      "blur" : 0,
+      "roundness" : 12,
+      "paddingVertical" : 10
+    },
+    "credit" : "Jacqueline",
+    "separator" : {
+      "color" : "#333333FF",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#333333FF",
+      "thickness" : 2
+    },
+    "name" : "Pretty in Pink (v2)"
+  }
+}

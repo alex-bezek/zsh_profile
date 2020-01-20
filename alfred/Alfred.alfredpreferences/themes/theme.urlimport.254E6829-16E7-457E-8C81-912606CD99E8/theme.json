@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 4,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#C6D940FF",
+        "font" : "Monaco",
+        "color" : "#797879FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#FDF9F8FF",
+        "font" : "Monaco",
+        "color" : "#FF9400FF"
+      },
+      "backgroundSelected" : "#FEFEFA25",
+      "text" : {
+        "size" : 16,
+        "colorSelected" : "#FF9400FF",
+        "font" : "Monaco",
+        "color" : "#FEFFFFE5"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 4,
+      "iconSize" : 31
+    },
+    "search" : {
+      "paddingVertical" : 2,
+      "background" : "#FAFBFF0D",
+      "spacing" : 6,
+      "text" : {
+        "size" : 28,
+        "colorSelected" : "#000000FF",
+        "font" : "Monaco",
+        "color" : "#FBFBFFC9"
+      },
+      "backgroundSelected" : "#B2D7FFFF"
+    },
+    "window" : {
+      "color" : "#202020FF",
+      "paddingHorizontal" : 10,
+      "width" : 560,
+      "borderPadding" : 1,
+      "borderColor" : "#E5FB49FF",
+      "blur" : 0,
+      "roundness" : 20,
+      "paddingVertical" : 10
+    },
+    "credit" : "Stelios H",
+    "separator" : {
+      "color" : "#00000000",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#A3AC00FF",
+      "thickness" : 2
+    },
+    "name" : "DevOholic"
+  }
+}

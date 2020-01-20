@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>0751896C-2B90-42B6-B0B0-0CAD80C46F0C</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>aws</string>
+			<key>text</key>
+			<string>AWS</string>
+			<key>url</key>
+			<string>https://sts.cernaws.com/adfs/ls/idpinitiatedsignon.aspx?loginToRP=urn:amazon:webservices</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>10F27B83-4108-4829-BB62-ED9C0648487A</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>new relic</string>
+			<key>text</key>
+			<string>new relic</string>
+			<key>url</key>
+			<string>https://rpm.newrelic.com/accounts/1721442</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>2C8080E8-A2E5-4D5F-BE81-A25DA7E7D2E4</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>dcos prod</string>
+			<key>text</key>
+			<string>DC/OS Prod</string>
+			<key>url</key>
+			<string>https://dcos2.us.healtheintent.net</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>41DE87B3-EEF0-40D8-8E01-86C4C90AE107</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>git</string>
+			<key>text</key>
+			<string>Github Search</string>
+			<key>url</key>
+			<string>https://github.cerner.com/search?q={query}&amp;ref=opensearch</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>43062CAA-56A8-4A02-B4DA-38CB440A5BF6</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>jira</string>
+			<key>text</key>
+			<string>Jira</string>
+			<key>url</key>
+			<string>https://jira2.cerner.com/secure/QuickSearch.jspa?searchString={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>4BF3288A-319A-4AD1-9BDD-16628EC39752</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>dcos aws stage</string>
+			<key>text</key>
+			<string>DC/OS AWS Staging</string>
+			<key>url</key>
+			<string>https://dcos.us-zone1.staginghealtheintent.net</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>7BC55837-1F29-4AF4-BCF6-29CE285866AF</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>terr</string>
+			<key>text</key>
+			<string>terraform</string>
+			<key>url</key>
+			<string>https://github.cerner.com/healtheintent/hi-terraform-providers</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>7E5A79DD-2591-448C-8AE8-2EA17AE2AE63</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>dcos</string>
+			<key>text</key>
+			<string>DC/OS Dev</string>
+			<key>url</key>
+			<string>https://dcos2.us.devhealtheintent.net</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>82FCD5E8-B9E1-4B30-B8DD-29BFCE4BA3BD</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>dcos stage</string>
+			<key>text</key>
+			<string>DC/OS Staging</string>
+			<key>url</key>
+			<string>https://dcos2.us.staginghealtheintent.net</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>89B4C50D-ED66-4D70-B5F5-2F8416C98AD4</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>dcos aws prod</string>
+			<key>text</key>
+			<string>DC/OS AWS Prod</string>
+			<key>url</key>
+			<string>https://dcos.us-zone1.healtheintent.net</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>8B3FC16E-D878-40FC-B53E-C264DD39EDB7</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>logs prod</string>
+			<key>text</key>
+			<string>splunk prod</string>
+			<key>url</key>
+			<string>https://logs.cerner.com/en-US/app/cerner_pop_health/search?q=search%20{query}&amp;sid=1567011326.12458_19E89582-F5DF-4C67-846B-DB9777CA6D13&amp;display.page.search.mode=smart&amp;dispatch.sample_ratio=1&amp;earliest=-1h&amp;latest=now</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>BE151D75-BA94-450E-8576-5DA3E295A48C</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>logs staging</string>
+			<key>text</key>
+			<string>splunk staging</string>
+			<key>url</key>
+			<string>https://logs.sandboxcerner.com/en-US/app/cerner_pop_health/search?q=search%20{query}&amp;sid=1567011326.12458_19E89582-F5DF-4C67-846B-DB9777CA6D13&amp;display.page.search.mode=smart&amp;dispatch.sample_ratio=1&amp;earliest=-1h&amp;latest=now</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>CD56063E-BDF7-40B9-ADC4-BC76C02F9841</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>logs dev</string>
+			<key>text</key>
+			<string>splunk dev</string>
+			<key>url</key>
+			<string>https://logs.devcerner.com/en-US/app/cerner_pop_health/search?q=search%20{query}&amp;sid=1567011326.12458_19E89582-F5DF-4C67-846B-DB9777CA6D13&amp;display.page.search.mode=smart&amp;dispatch.sample_ratio=1&amp;earliest=-1h&amp;latest=now</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
