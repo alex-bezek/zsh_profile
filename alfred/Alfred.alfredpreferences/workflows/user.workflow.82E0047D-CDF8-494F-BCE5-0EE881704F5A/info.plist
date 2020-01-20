@@ -12,6 +12,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>ACCD2F5F-D363-4A1C-830D-6A43356E90CD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>8D0E2CFB-3950-409B-BC2B-A013BE88F522</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -42,6 +52,21 @@
 	<string>Edit Files</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string>/Applications/Visual Studio Code.app</string>
+				<key>sourcefile</key>
+				<string>~/.hammerspoon/init.lua</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>ACCD2F5F-D363-4A1C-830D-6A43356E90CD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -103,21 +128,28 @@
 			<key>xpos</key>
 			<integer>75</integer>
 			<key>ypos</key>
-			<integer>60</integer>
+			<integer>135</integer>
 		</dict>
 		<key>8D0E2CFB-3950-409B-BC2B-A013BE88F522</key>
 		<dict>
 			<key>xpos</key>
 			<integer>295</integer>
 			<key>ypos</key>
-			<integer>60</integer>
+			<integer>135</integer>
+		</dict>
+		<key>ACCD2F5F-D363-4A1C-830D-6A43356E90CD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>295</integer>
+			<key>ypos</key>
+			<integer>15</integer>
 		</dict>
 		<key>CDCFE753-26A8-4723-BD92-61AD962EB43C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>295</integer>
 			<key>ypos</key>
-			<integer>180</integer>
+			<integer>260</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
