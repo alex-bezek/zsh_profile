@@ -18,29 +18,3 @@ expect "accept? \[y/n\]: "
 send "y\r"
 
 interact
-
-
-
-
-# cernerKey = 'sha256:c6e38affff62e7e29845041c902e0fa25fe9a488066ace773462a841d4e36089'
-# cwxKey = 'sha256:c3f526663f9f43ac3cf4dd3f75f6a193a1cf72a3c95712698b060cc37aa2fad7'
-# cernerPID = '/var/run/openconnect-corp.pid'
-# cwxPID = '/var/run/openconnect-rho.pid'
-# cernerXML = '/opt/cisco/anyconnect/profile/Cerner.xml'
-# cwxXML = '/opt/cisco/anyconnect/profile/cwxvpn.xml'
-# cernerHostAddress = 'vpn.cerner.com'
-# #cernerHostAddress = 'vpnuk.cerner.com'	#Backup Host
-# cwxHostAddress = 'rhovpn.cerner.com'
-# sphereDomain = 'ssh.cernuksphere.net'
-
-
-# #Command To Connect To Cerner VPN
-# cernerVPN = 'sudo openconnect -b --pid-file=' + cernerPID + ' --xmlconfig=' + cernerXML + ' --servercert ' + cernerKey + ' --user=' + userID + ' ' + cernerHostAddress
-
-# #cernerVPN = 'sudo openconnect -b --pid-file=' + cernerPID + ' --xmlconfig=' + cernerXML + ' --servercert ' + cernerKey + ' -s \'~/vpn-slice/bin/vpn-slice ' + cwxHostAddress + '\' --user=' + userID + ' ' + cernerHostAddress
-# #cernerVPN = 'sudo openconnect -b --pid-file=' + cernerPID + ' --xmlconfig=' + cernerXML + ' --servercert ' + cernerKey + ' -s \'' + cwxVPN + '\' --user=' + userID + ' ' + cernerHostAddress
-
-# #Connect To Cerner Works VPN
-# cwxVPN = 'sudo openconnect -b --pid-file=' + cwxPID + ' --xmlconfig=' + cwxXML + ' --servercert ' + cwxKey + ' --user=' + userID + ' ' + cwxHostAddress
-
-# #cernerVPN = 'sudo openconnect -b --pid-file=' + cernerPID + ' --xmlconfig=' + cernerXML + ' --servercert ' + cernerKey + ' -s \'' + cwxVPN + '\' --user=' + userID + ' ' + cernerHostAddress
