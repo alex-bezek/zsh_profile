@@ -1,6 +1,8 @@
 # Setup
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+# Profiling
+# zmodload zsh/zprof
 export LPASS_AGENT_TIMEOUT=0
 
 # Path to your oh-my-zsh installation.
@@ -25,9 +27,6 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # Setup Node
-# export NVM_DIR="/Users/as027811/.nvm"
-# export NVM_DIR="/usr/local/opt/nvm/nvm.sh/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export NVM_DIR="$HOME/.nvm"
 NVM_HOMEBREW="/usr/local/opt/nvm/nvm.sh"
 [ -s "$NVM_HOMEBREW" ] && \. "$NVM_HOMEBREW"
@@ -101,15 +100,15 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   vcs
   ssh
   # custom_docker
-  nvm
+  # nvm
   rvm
   # command_execution_time
   newline
 )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-  # context
-  # command_execution_time
-  # battery
+#   # context
+#   # command_execution_time
+#   # battery
 )
 
 function get_random_rgb_from_cwd () {
@@ -189,6 +188,9 @@ function ga() {
   gp
 }
 
+export LOCAL_IP=`ipconfig getifaddr en0`
+alias hs="browser-sync start -s -f . --no-notify --directory --host $LOCAL_IP --port 9000"
+
 function psgrep() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
 function search() { find . -iname "*$@*" ; }
 
@@ -237,3 +239,6 @@ function jumpall() {
     send-keys 'jump prod-aws pre-connected' C-m \; \
 }
 ZSH_THEME=powerlevel10k/powerlevel10k
+
+# Profiling
+# zprof
