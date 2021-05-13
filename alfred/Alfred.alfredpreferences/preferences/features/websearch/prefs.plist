@@ -17,6 +17,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>10C3E82A-C65A-49E2-B763-65AB6DBDF16D</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>spin</string>
+			<key>text</key>
+			<string>Spinnaker</string>
+			<key>url</key>
+			<string>https://gate-healtheintent.spin.cernerops.com/login</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>10F27B83-4108-4829-BB62-ED9C0648487A</key>
 		<dict>
 			<key>enabled</key>
@@ -43,6 +56,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>2E65D552-F51F-487F-B4D1-8C256FB7F52D</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>dcos uk</string>
+			<key>text</key>
+			<string>dcos uk</string>
+			<key>url</key>
+			<string>https://dcos2.eu.healtheintent.net</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>41DE87B3-EEF0-40D8-8E01-86C4C90AE107</key>
 		<dict>
 			<key>enabled</key>
@@ -52,7 +78,7 @@
 			<key>text</key>
 			<string>Github Search</string>
 			<key>url</key>
-			<string>https://github.cerner.com/search?q={query}&amp;ref=opensearch</string>
+			<string>https://github.cerner.com/search?q=org%3Ahealtheintent+org%3Asre+{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -66,6 +92,19 @@
 			<string>Jira</string>
 			<key>url</key>
 			<string>https://jira2.cerner.com/secure/QuickSearch.jspa?searchString={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>453B2886-E4AE-4E35-A598-0AC31B4FB041</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>spin eks</string>
+			<key>text</key>
+			<string>spinnaker eks personal</string>
+			<key>url</key>
+			<string>https://healtheintent.spin.cernerops.com/#/applications/containerorchestrationeks/executions</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -104,7 +143,20 @@
 			<key>text</key>
 			<string>DC/OS Dev</string>
 			<key>url</key>
-			<string>https://dcos2.us.devhealtheintent.net</string>
+			<string>https://dcos.us.devhealtheintent.net</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>7F673D65-BD62-48E3-B4D2-32E1072F32F5</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>hpc</string>
+			<key>text</key>
+			<string>Healtheintent Pipeline Config</string>
+			<key>url</key>
+			<string>https://github.cerner.com/Spinnaker-healtheintent/healtheintent-pipeline-config</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -117,7 +169,7 @@
 			<key>text</key>
 			<string>DC/OS Staging</string>
 			<key>url</key>
-			<string>https://dcos2.us.staginghealtheintent.net</string>
+			<string>https://dcos.us.staginghealtheintent.net</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -147,6 +199,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>AC5DA47B-DC5E-4B27-8A0B-B0B98E4D5AFD</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>sub</string>
+			<key>text</key>
+			<string>sub</string>
+			<key>url</key>
+			<string>https://www.youtube.com/feed/subscriptions</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>BE151D75-BA94-450E-8576-5DA3E295A48C</key>
 		<dict>
 			<key>enabled</key>
@@ -170,6 +235,19 @@
 			<string>splunk dev</string>
 			<key>url</key>
 			<string>https://logs.devcerner.com/en-US/app/cerner_pop_health/search?q=search%20{query}&amp;sid=1567011326.12458_19E89582-F5DF-4C67-846B-DB9777CA6D13&amp;display.page.search.mode=smart&amp;dispatch.sample_ratio=1&amp;earliest=-1h&amp;latest=now</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>DCEB4EBB-9432-4D84-9CA5-6D782F67C3FF</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>snd</string>
+			<key>text</key>
+			<string>snd</string>
+			<key>url</key>
+			<string>https://github.cerner.com/Spinnaker-healtheintent/healtheintent-pipeline-config-snd</string>
 			<key>utf8</key>
 			<true/>
 		</dict>

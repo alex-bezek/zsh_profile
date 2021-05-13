@@ -9,6 +9,10 @@ switch [lindex $argv 0] {
         set credentials "cerner-sphere"
         set jumpgate "ssh.us-west-2.healtheintent.com"
     }
+    prod-uk {
+        set credentials "cerner-sphere-uk"
+        set jumpgate "ssh.cernuksphere.net"
+    }
     stage {
         set credentials "cerner-sphere-stage"
         set jumpgate "ssh.spherestage.com"
@@ -16,6 +20,10 @@ switch [lindex $argv 0] {
     stage-aws {
         set credentials "cerner-sphere-stage"
         set jumpgate "ssh.us-west-2.staginghealtheintent.com"
+    }
+    dev {
+        set credentials "corp"
+        set jumpgate "ssh.us-west-2.devhealtheintent.com"
     }
 }
 

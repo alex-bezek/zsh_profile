@@ -6,7 +6,10 @@ set password [exec lpass show --password "corp"]
 
 spawn awscli_setup
 
-expect "Select profile/account:  "
+expect "Select an option:"
+send "L\r"
+
+expect "Select profile/account: "
 send "2\r"
 
 expect "Username: "

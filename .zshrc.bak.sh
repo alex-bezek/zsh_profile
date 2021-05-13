@@ -10,6 +10,7 @@ export ZSH=/Users/as027811/.oh-my-zsh
 
 plugins=(
   jsontools
+  kubectl
   last-working-dir
   node
   tmux
@@ -18,6 +19,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source <(kubectl completion zsh)
 export EDITOR='code'
 export TERM="xterm-256color"
 
@@ -54,16 +56,16 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_SHORTEN_STRATEGY=”truncate_from_right”
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 
-# zsh_docker_signal() {
-# 	local color
-# 	local symbol="\uf308"
-# 	docker=$(docker ps)
-# 	if [ $? = 0 ]; then
-#     version=$(docker version --format '{{.Server.Version}}')
-#     color="%F{blue}"
-#     echo -n "%{$color%}$symbol $version"
-#   fi
-# }
+zsh_docker_signal() {
+	local color
+	local symbol="\uf308"
+	docker=$(docker ps)
+	if [ $? = 0 ]; then
+    version=$(docker version --format '{{.Server.Version}}')
+    color="%F{blue}"
+    echo -n "%{$color%}$symbol $version"
+  fi
+}
 
 # http://nerdfonts.com/#cheat-lssheet
 POWERLEVEL9K_CUSTOM_FIRE="echo -n '\ue780'"
@@ -88,21 +90,28 @@ POWERLEVEL9K_NVM_FOREGROUND='black'
 POWERLEVEL9K_RUBY_ICON=$'\ue791'
 POWERLEVEL9K_RVM_BACKGROUND='red'
 
-# POWERLEVEL9K_CUSTOM_DOCKER="zsh_docker_signal"
-# POWERLEVEL9K_CUSTOM_DOCKER_BACKGROUND='black'
-# POWERLEVEL9K_CUSTOM_DOCKER_FOREGROUND='blue'
+POWERLEVEL9K_KUBECONTEXT_BACKGROUND='005'
+POWERLEVEL9K_KUBECONTEXT_FOREGROUND='000'
+
+POWERLEVEL9K_CUSTOM_DOCKER="zsh_docker_signal"
+POWERLEVEL9K_CUSTOM_DOCKER_BACKGROUND='black'
+POWERLEVEL9K_CUSTOM_DOCKER_FOREGROUND='blue'
+
+AWS_DEFAULT_PROFILE='Cerner-Duo'
 
 # Customise the Powerlevel9k prompts
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   custom_fire
   status
+  rvm
+  custom_docker
+  # aws
+  go_version
   dir
   vcs
+  newline
+  kubecontext
   ssh
-  # custom_docker
-  # nvm
-  rvm
-  # command_execution_time
   newline
 )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
@@ -173,6 +182,12 @@ alias killit='kill -9 %%'
 
 alias gs="git status"
 alias current_branch="git symbolic-ref --short HEAD"
+alias kia="kubectl get ingress --all-namespaces"
+alias kpa="kubectl get pods -A"
+alias kn="kubectl get nodes -o wide"
+alias kga="kubectl get all -A"
+alias ksa="kubectl get services -A"
+alias k=kubectl
 function gp() {
   git push origin $(git symbolic-ref --short HEAD)
 }
@@ -220,6 +235,10 @@ function awscli () {
   $HOME/zsh_profile/awscli
 }
 
+function awscliap () {
+  $HOME/zsh_profile/awscli_ap-1
+}
+
 alias tls="tmux ls"
 function ta() { tmux a -t "$@" }
 alias ta="tmux a #"
@@ -242,3 +261,27 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Profiling
 # zprof
+
+fd() {
+  preview="git diff $@ --color=always -- {-1}"
+  git diff $@ --name-only | fzf --preview 'bat {-1} --color=always' --preview-window=right:70%
+}
+
+export KUBE_EDITOR='code -w'
+complete -F __start_kubectl k
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+alias kctx="kubectl ctx"
+alias kns="kubectl ns"
+alias kaa="kubectl get all -A"
+alias kdr='kubectl --dry-run=client -o yaml'
+alias kap='kubectl apply'
+alias kd='kubectl delete'
+alias kda='kubectl get deployments -A'
+alias kbb='kubectl run busybox-test --image=busybox -it --rm --restart=Never --'
+alias kdb='kubectl describe'
+alias kl='kubectl logs'
+alias ke='kubectl exec -it'
+
+alias m="cmatrix -C green"
+# TODO
+# * quick command to get an alpine shell in the cluster
