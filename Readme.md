@@ -1,3 +1,8 @@
+Other things installed:
+nixos
+$ curl -L https://nixos.org/nix/install | sh
+
+
 TODO:
 https://github.com/junegunn/fzf/wiki/examples
 https://paweldu.dev/posts/fzf-live-repl/
