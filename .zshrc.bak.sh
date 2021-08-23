@@ -285,3 +285,12 @@ alias ke='kubectl exec -it'
 alias m="cmatrix -C green"
 # TODO
 # * quick command to get an alpine shell in the cluster
+
+watch() {
+  fswatch -o ./ | while read num ; \
+  do \
+    clear
+    ruby ./"$1"
+  done
+}
+if [ -e /Users/as027811/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/as027811/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

@@ -17,6 +17,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>0CD6D40E-9B7C-4CCC-A05F-F355CF784C40</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>kitty-todo</string>
+			<key>text</key>
+			<string>kitty-todo</string>
+			<key>url</key>
+			<string>https://docs.google.com/document/d/15VHtt2wLZQWxO5N-UJfghUlHaW_UlXZvS-WmXs73LL8/edit?usp=sharing</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>10C3E82A-C65A-49E2-B763-65AB6DBDF16D</key>
 		<dict>
 			<key>enabled</key>
@@ -196,6 +209,19 @@
 			<string>splunk prod</string>
 			<key>url</key>
 			<string>https://logs.cerner.com/en-US/app/cerner_pop_health/search?q=search%20{query}&amp;sid=1567011326.12458_19E89582-F5DF-4C67-846B-DB9777CA6D13&amp;display.page.search.mode=smart&amp;dispatch.sample_ratio=1&amp;earliest=-1h&amp;latest=now</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>9A0DD89A-7275-4208-830F-D93F698D7EE1</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>ja</string>
+			<key>text</key>
+			<string>Jira Align</string>
+			<key>url</key>
+			<string>https://jiraalign.cerner.com/</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
