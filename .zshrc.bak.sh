@@ -1,296 +1,188 @@
-# Setup
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Profiling
-# zmodload zsh/zprof
-export LPASS_AGENT_TIMEOUT=0
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/as027811/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
 plugins=(
   jsontools
+  sudo
   kubectl
   last-working-dir
-  node
   tmux
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
-source <(kubectl completion zsh)
-export EDITOR='code'
-export TERM="xterm-256color"
 
-# Setup Go
-export GOPATH="${HOME}/go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+# User configuration
 
-# Setup Node
-export NVM_DIR="$HOME/.nvm"
-NVM_HOMEBREW="/usr/local/opt/nvm/nvm.sh"
-[ -s "$NVM_HOMEBREW" ] && \. "$NVM_HOMEBREW"
+# export MANPATH="/usr/local/man:$MANPATH"
 
-export PATH="$HOME/.yarn/bin:$PATH"
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  if [[ -f .nvmrc && -r .nvmrc ]]; then
-    nvm use
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-# Setup Ruby
-export PATH="$PATH:$HOME/.rvm/bin"
-source ~/.rvm/scripts/rvm
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
-# Load Nerd Fonts with Powerlevel9k theme for Zsh
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_SHORTEN_STRATEGY=”truncate_from_right”
-source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-zsh_docker_signal() {
-	local color
-	local symbol="\uf308"
-	docker=$(docker ps)
-	if [ $? = 0 ]; then
-    version=$(docker version --format '{{.Server.Version}}')
-    color="%F{blue}"
-    echo -n "%{$color%}$symbol $version"
-  fi
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# Customizations
+
+ngrok_environment() {
+  echo -n "NGROK $NGROK_ENV"
 }
 
-# http://nerdfonts.com/#cheat-lssheet
+POWERLEVEL9K_INSTANT_PROMPT=quiet
 POWERLEVEL9K_CUSTOM_FIRE="echo -n '\ue780'"
-POWERLEVEL9K_CUSTOM_FIRE_BACKGROUND="black"
 POWERLEVEL9K_CUSTOM_FIRE_FOREGROUND="red"
-
-# Sets new icons on the power bar (triangle by default)
-# Need to see if i can find a way to only apply this on the newline
-# POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\uE0B1'
-# POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\uE0B3'
 POWERLEVEL9K_VCS_BRANCH_ICON=$'\ue727 '
 POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=''
-
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD='0'
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='black'
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='blue'
+POWERLEVEL9K_CUSTOM_NGROK="ngrok_environment"
+POWERLEVEL9K_GO_VERSION_BACKGROUND='021'
 
-POWERLEVEL9K_NODE_ICON=$'\uf898'
-POWERLEVEL9K_NVM_BACKGROUND='green'
-POWERLEVEL9K_NVM_FOREGROUND='black'
-
-POWERLEVEL9K_RUBY_ICON=$'\ue791'
-POWERLEVEL9K_RVM_BACKGROUND='red'
-
-POWERLEVEL9K_KUBECONTEXT_BACKGROUND='005'
-POWERLEVEL9K_KUBECONTEXT_FOREGROUND='000'
-
-POWERLEVEL9K_CUSTOM_DOCKER="zsh_docker_signal"
-POWERLEVEL9K_CUSTOM_DOCKER_BACKGROUND='black'
-POWERLEVEL9K_CUSTOM_DOCKER_FOREGROUND='blue'
-
-AWS_DEFAULT_PROFILE='Cerner-Duo'
-
-# Customise the Powerlevel9k prompts
+# # Customise the Powerlevel9k prompts
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   custom_fire
   status
-  rvm
-  custom_docker
-  # aws
-  go_version
   dir
   vcs
-  newline
   kubecontext
-  ssh
+  custom_ngrok
+  go_version
+  terraform
   newline
 )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-#   # context
-#   # command_execution_time
-#   # battery
+  command_execution_time
+  time
+  battery
 )
 
-function get_random_rgb_from_cwd () {
-  local color=$1;
-  printf $(python -c "import random; import os; random.seed('$color' + os.getcwd()); print((random.randint(0,255)+255)/2)")
-}
-
-function set_iterm_tab_color () {
-  local color=$1;
-  local color_rgb_value=$(get_random_rgb_from_cwd $color)
-  printf "\033]6;1;bg;$color;brightness;$color_rgb_value\a"
-}
-
-function automatic_iterm_tab_color_cwd () {
-  set_iterm_tab_color "red"
-  set_iterm_tab_color "green"
-  set_iterm_tab_color "blue"
-}
-
-function set_tab_color() {
-  if [[ -f Gemfile.lock ]]; then
-    echo -e "\033]6;1;bg;red;brightness;231\a"
-    echo -e "\033]6;1;bg;green;brightness;68\a"
-    echo -e "\033]6;1;bg;blue;brightness;68\a"
-  elif [[ -f .nvmrc ]]; then
-    echo -e "\033]6;1;bg;red;brightness;68\a"
-    echo -e "\033]6;1;bg;green;brightness;231\a"
-    echo -e "\033]6;1;bg;blue;brightness;68\a"
-  else
-    automatic_iterm_tab_color_cwd
-  fi
-}
-
-set_tab_color
-autoload -U add-zsh-hook
-add-zsh-hook chpwd set_tab_color
-
-function set_iterm_title() {
-  if [ $# -eq 1 ]
-  then
-    echo -ne "\033]0;$1\007"
-  fi
-}
-
-# Aliases
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
-# alias ls="colorls --all"
-alias ll="ls --long"
-alias lt="ls --tree"
-alias l="ls"
-alias la="ls"
-
-alias be="bundle exec"
-alias bi="bundle install"
-alias rs="bundle exec rails server -b 0.0.0.0"
-alias rc="bundle exec rails console"
-
-alias G=" | grep "
-alias ..="cd .."
-alias killit='kill -9 %%'
-
-alias gs="git status"
-alias current_branch="git symbolic-ref --short HEAD"
-alias kia="kubectl get ingress --all-namespaces"
-alias kpa="kubectl get pods -A"
-alias kn="kubectl get nodes -o wide"
-alias kga="kubectl get all -A"
-alias ksa="kubectl get services -A"
-alias k=kubectl
-function gp() {
-  git push origin $(git symbolic-ref --short HEAD)
-}
-function gfp() {
-  git push my-fork $(git symbolic-ref --short HEAD)
-}
 function gc() {
   git add .;
   git commit -m "$@"
 }
+
+function gp() {
+  git push origin $(git symbolic-ref --short HEAD)
+}
+
 function ga() {
   gc "$1"
   gp
 }
 
-export LOCAL_IP=`ipconfig getifaddr en0`
-alias hs="browser-sync start -s -f . --no-notify --directory --host $LOCAL_IP --port 9000"
-
-function psgrep() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
-function search() { find . -iname "*$@*" ; }
-
-alias alert='terminal-notifier -group "terminal" -title "Terminal Task" -activate "com.googlecode.iterm2" -message "$([ $? = 0 ] && echo Finished || echo Error)"'
-
-eval $(thefuck --alias)
-alias f="fuck"
-
-setopt hist_find_no_dups        # Dont display duplicates during searches.
-setopt share_history            # Share history between multiple shells
-setopt hist_ignore_all_dups     # Remember only one unique copy of the command.s
-
-function jump () {
-  if [ "$#" = 1 ]
-  then
-    # vpn
-  fi
-  $HOME/zsh_profile/jump "$1"
+function nds() {
+  export NGROK_ENV="$1"
 }
 
-function vpn () {
-  $HOME/zsh_profile/vpn
-  /opt/cisco/anyconnect/bin/vpn -s connect cwxvpn
-}
-
-function awscli () {
-  $HOME/zsh_profile/awscli
-}
-
-function awscliap () {
-  $HOME/zsh_profile/awscli_ap-1
-}
-
-alias tls="tmux ls"
-function ta() { tmux a -t "$@" }
-alias ta="tmux a #"
-function tn() { tmux new -s "$@" }
-
-# tmux kill-session -t myname
-function jumpall() {
-  vpn
-  tmux new-session -s jumpgates \; \
-    split-window -v \; \
-    send-keys 'jump stage pre-connected' C-m \; \
-    split-window -h \; \
-    send-keys 'jump stage-aws pre-connected' C-m \; \
-    select-pane -t 0 \; \
-    send-keys 'jump prod pre-connected' C-m \; \
-    split-window -h\; \
-    send-keys 'jump prod-aws pre-connected' C-m \; \
-}
-ZSH_THEME=powerlevel10k/powerlevel10k
-
-# Profiling
-# zprof
-
-fd() {
-  preview="git diff $@ --color=always -- {-1}"
-  git diff $@ --name-only | fzf --preview 'bat {-1} --color=always' --preview-window=right:70%
-}
-
-export KUBE_EDITOR='code -w'
-complete -F __start_kubectl k
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+alias k="kubectl"
 alias kctx="kubectl ctx"
 alias kns="kubectl ns"
-alias kaa="kubectl get all -A"
-alias kdr='kubectl --dry-run=client -o yaml'
-alias kap='kubectl apply'
-alias kd='kubectl delete'
-alias kda='kubectl get deployments -A'
-alias kbb='kubectl run busybox-test --image=busybox -it --rm --restart=Never --'
-alias kdb='kubectl describe'
-alias kl='kubectl logs'
-alias ke='kubectl exec -it'
+alias b='nd go install nd'
+alias gs='git status'
+alias gd='git diff'
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/ngrok_github_key"
+export PATH=$PATH:/usr/local/go/bin
+export NGROK_EMAIL="alex@ngrok.com"
+export NGROK_DISABLE_ND_AUTO_RECOMPILATION=true
+export ND_AUTO_SSO_LOGIN=true
+export NGROK_DISABLE_ND_INTERACTIVE_HELP=true
 
-alias m="cmatrix -C green"
-# TODO
-# * quick command to get an alpine shell in the cluster
-
-watch() {
-  fswatch -o ./ | while read num ; \
-  do \
-    clear
-    ruby ./"$1"
-  done
-}
-if [ -e /Users/as027811/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/as027811/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+# eval "$(direnv hook zsh)"
+# source "/Users/alex/code/ngrok/.cache/ngrok-host-shellhook"
+source /home/ubuntu/ngrok/.cache/ngrok-host-shellhook
